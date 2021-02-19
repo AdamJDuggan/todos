@@ -12,7 +12,7 @@ const TodosStore = {
       const responce = await axios
         .get(`https://jsonplaceholder.typicode.com/todos/1`)
         .then((res) => res.data.title)
-        .then(() => {
+        .then((res) => {
           console.log("res", res);
           console.log("state", state);
         });
