@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// React
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+// Styles
+import "./index.css";
+
+// SimpleState Provider
+import { SimpleProvider } from "simple-context-state";
+
+// Stores created by the user ...
+import { TodosStore } from "./stores/TodosStore";
+import { ConsolesStore } from "./stores/ConsolesStore";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <SimpleProvider component={<App />} stores={[TodosStore, ConsolesStore]} />,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  document.getElementById("root")
+);
