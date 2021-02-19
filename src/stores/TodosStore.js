@@ -14,9 +14,9 @@ const TodosStore = {
         .then((res) => res.data.title);
       console.log("res", responce);
       console.log("state", state);
-      const newState = [...state, responce];
-      console.log("newState", newState);
-      return newState;
+      //const newState = [...state, responce];
+      //console.log("newState", newState);
+      //return newState;
 
       // console.log("newState", newState);
 
