@@ -11,11 +11,10 @@ const TodosStore = {
     fetch: (state) => (payload) => async () => {
       const responce = await axios
         .get(`https://jsonplaceholder.typicode.com/todos/1`)
-        .then((res) => res.data.title)
-        .then((res) => {
-          console.log("res", res);
-          console.log("state", state);
-        });
+        .then((res) => res.data.title);
+      console.log("res", res);
+      console.log("state", state);
+      return;
       // const newState = [...state, responce];
 
       // console.log("newState", newState);
