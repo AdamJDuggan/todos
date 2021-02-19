@@ -12,15 +12,8 @@ const TodosStore = {
       const responce = await axios
         .get(`https://jsonplaceholder.typicode.com/todos/1`)
         .then((res) => res.data.title);
-      console.log("res", responce);
-      console.log("state", state);
-      //const newState = [...state, responce];
-      //console.log("newState", newState);
-      //return newState;
-
-      // console.log("newState", newState);
-
-      // return newState;
+      const newState = [...state, responce];
+      return newState;
     },
     fetch_fail: (state) => (payload) => async () => {
       const responce = await axios
